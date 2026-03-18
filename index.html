@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>RoboCritics: Enabling Reliable End-to-End LLM Robot Programming through Expert-Informed Critics</title>
+
+    <meta name="description"
+        content="RoboCritics: Enabling Reliable End-to-End LLM Robot Programming through Expert-Informed Critics">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="//cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/default.min.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
+
+    <style>
+        .nav-pills {
+            position: relative;
+            display: inline;
+        }
+
+        .imtip {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+
+    <link rel="stylesheet" href="./css/bulma.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div class="container" id="main">
+        <div class="row mt-4">
+            <div class="col-md-12 text-center" style="max-width: 1280px; margin: 0 auto; color: #333;">
+                <h2>
+                    <b>
+                        <font size="+4">RoboCritics: Enabling Reliable End-to-End LLM <br> Robot Programming through
+                            Expert-Informed Critics</font>
+                    </b>
+                </h2>
+            </div>
+
+            <div class="col-md-12 text-center" style="max-width: 1280px; margin: 0 auto; color: #333;">
+                <small style="font-size: 20px; margin-top: 100px; font-weight: bold;">
+                    <br>
+                    HRI 2026
+                </small>
+            </div>
+        </div>
+    </div>
+
+    <!-- Authors -->
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <ul class="list-inline">
+                <br>
+                <li>Callie Y. Kim</li>
+                <li>Nathan Thomas White</li>
+                <li>Evan He</li>
+                <li>Frederic Sala</li>
+                <li>Bilge Mutlu</li>
+                <br>
+                <br>
+            </ul>
+            <p>Department of Computer Sciences, University of Wisconsin&ndash;Madison</p>
+        </div>
+    </div>
+
+    <!-- Links -->
+    <div class="row justify-content-md-center" style="margin-top: 50px; margin-bottom: 50px;">
+        <div class="col-md-2 text-center d-flex flex-column align-items-center">
+            <a href="https://arxiv.org/pdf/2603.06842">
+                <div style="width: 60px; height: 60px;">
+                    <img src="img/paper_small.png" style="object-fit: contain; width: 100%; height: 100%;">
+                </div>
+            </a>
+            <h4><strong>Paper</strong></h4>
+        </div>
+
+        <div class="col-md-2 text-center d-flex flex-column align-items-center">
+            <a href="https://osf.io/vdnw7/?view_only=3525789a1462443a884f9c895272ac11">
+                <div style="width: 60px; height: 60px;">
+                    <img src="img/paper_appendices.png" style="object-fit: contain; width: 100%; height: 100%;">
+                </div>
+            </a>
+            <h4><strong>Supplementary Materials</strong></h4>
+        </div>
+
+        <div class="col-md-2 text-center d-flex flex-column align-items-center">
+            <a href="#">
+                <div style="width: 60px; height: 60px;">
+                    <img src="img/github.png" style="object-fit: contain; width: 100%; height: 100%;">
+                </div>
+            </a>
+            <h4><strong>Code (coming soon)</strong></h4>
+        </div>
+    </div>
+
+    <!-- Video -->
+    <section class="section">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column is-four-fifths">
+                    <video width="100%" height="auto" controls>
+                        <source src="img/robocritics_video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+
+            <!-- Abstract -->
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3">Abstract</h2>
+
+                    <div class="columns is-centered">
+                        <div class="column is-four-fifths">
+                            <figure style="text-align:center;">
+                                <img src="img/teaser.png" width="100%" height="100%">
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="content has-text-justified">
+                        <p class="text-justify">
+                            Large language models (LLMs) are increasingly used to generate robot programs from
+                            natural language instructions. However, ensuring the safety and reliability of these
+                            generated programs remains a critical challenge. We introduce RoboCritics, a system
+                            that augments LLM-based robot programming with expert-informed motion-level critics
+                            that analyze execution traces for problematic patterns. These critics detect issues
+                            such as joint speed violations, collisions, and unsafe end-effector poses, and provide
+                            actionable feedback for iterative improvement. Our interface surfaces transparent
+                            feedback and provides single-click correction options that feed structured messages
+                            back to the LLM. A user study with 18 participants demonstrated that this approach
+                            enhanced program reliability and reduced safety violations compared to systems
+                            lacking such verification mechanisms.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BibTeX -->
+    <section class="section" id="BibTeX">
+        <div class="container is-max-desktop content">
+            <h2 class="title is-3 has-text-centered">BibTeX</h2>
+            <pre><code class="language-bibtex">@inproceedings{kim2026robocritics,
+  title={RoboCritics: Enabling Reliable End-to-End LLM Robot Programming through Expert-Informed Critics},
+  author={Kim, Callie Y. and White, Nathan Thomas and He, Evan and Sala, Frederic and Mutlu, Bilge},
+  booktitle={Proceedings of the 21st ACM/IEEE International Conference on Human-Robot Interaction (HRI '26)},
+  year={2026},
+  address={Edinburgh, Scotland, UK}
+}</code></pre>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+
+</html>
